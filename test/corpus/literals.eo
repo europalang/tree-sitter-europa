@@ -1,0 +1,72 @@
+==============
+String Literal
+==============
+
+var strA = "Hello, world!";
+
+var strB = " `1234567890-=    qwertyuiop[]\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:ZXCVBNM<>?";
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (str_literal))
+      (decl_stmt
+        (id_literal)
+        (str_literal)))
+
+==============
+Number Literal
+==============
+
+var n1 = 5;
+
+var n2 = 2.3;
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (num_literal))
+      (decl_stmt
+        (id_literal)
+        (num_literal)))
+
+===============
+Boolean Literal
+===============
+
+var t = true;
+var f = false;
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (bool_literal))
+      (decl_stmt
+        (id_literal)
+        (bool_literal)))
+
+=============
+Array Literal
+=============
+
+var arr = [1, 2, 3];
+var arr2 = [];
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (array_literal
+          (num_literal)
+          (num_literal)
+          (num_literal)))
+      (decl_stmt
+        (id_literal)
+        (array_literal)))

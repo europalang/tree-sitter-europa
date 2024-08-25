@@ -1,0 +1,29 @@
+====================
+Variable Declaration
+====================
+
+var x = 5;
+var y = "hello, world!";
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (num_literal))
+      (decl_stmt
+        (id_literal)
+        (str_literal)))
+
+===================
+Variable Assignment
+===================
+
+x = 20;
+
+---
+
+(source_file
+      (assign_stmt
+        (id_literal)
+        (num_literal)))

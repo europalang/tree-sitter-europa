@@ -1,0 +1,33 @@
+=============
+Function Call
+=============
+
+println("Hello, world!");
+
+---
+
+(source_file
+      (fn_call
+        (id_literal)
+        (str_literal)))
+
+====================
+Function Declaration
+====================
+
+fn add(a, b) {
+    return a + b;
+}
+
+---
+
+(source_file
+      (fn_decl
+        (id_literal)
+        (id_literal)
+        (id_literal)
+        (block
+          (return_stmt
+            (binary_expr
+              (id_literal)
+              (id_literal))))))

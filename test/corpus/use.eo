@@ -1,0 +1,15 @@
+=============
+Use statement
+=============
+
+use io;
+use io.println;
+
+---
+
+(source_file
+      (use_stmt
+        (id_literal))
+      (use_stmt
+        (id_literal)
+        (id_literal)))

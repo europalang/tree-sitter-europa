@@ -1,0 +1,115 @@
+============
+If Statement
+============
+
+if true {
+    var x = 5;
+}
+
+---
+
+(source_file
+      (if_stmt
+        (bool_literal)
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal)))))
+
+======================
+If Statement with elif
+======================
+
+if true {
+    var x = 5;
+} elif false {
+    var x = 10;
+} elif true {
+    var x = 9;
+}
+
+---
+
+(source_file
+      (if_stmt
+        (bool_literal)
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal)))
+        (if_stmt_elif
+          (bool_literal)
+          (block
+            (decl_stmt
+              (id_literal)
+              (num_literal))))
+        (if_stmt_elif
+          (bool_literal)
+          (block
+            (decl_stmt
+              (id_literal)
+              (num_literal))))))
+
+======================
+If Statement with else
+======================
+
+if true {
+    var x = 5;
+} elif false {
+    var x = 5;
+} else {
+    var x = 5;
+}
+
+---
+
+(source_file
+      (if_stmt
+        (bool_literal)
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal)))
+        (if_stmt_elif
+          (bool_literal)
+          (block
+            (decl_stmt
+              (id_literal)
+              (num_literal))))
+        (if_stmt_else
+          (block
+            (decl_stmt
+              (id_literal)
+              (num_literal))))))
+
+=====================
+Ternary If Expression
+=====================
+
+var x = true ? 5 : 2;
+
+if true ? true : 5 + 1 {
+    var x = 5;
+}
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (ternary_expr
+          (bool_literal)
+          (num_literal)
+          (num_literal)))
+      (if_stmt
+        (ternary_expr
+          (bool_literal)
+          (bool_literal)
+          (binary_expr
+            (num_literal)
+            (num_literal)))
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal)))))

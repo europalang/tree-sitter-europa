@@ -1,0 +1,17 @@
+========
+Grouping
+========
+
+var x = 5 + (2 + 1);
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (binary_expr
+          (num_literal)
+          (group_expr
+            (binary_expr
+              (num_literal)
+              (num_literal))))))

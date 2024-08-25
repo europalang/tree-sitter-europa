@@ -1,0 +1,53 @@
+==================
+"Fib" test program
+==================
+
+use io.println;
+
+var a = 0;
+var b = 1;
+var c = 0;
+
+while a + b < 1000000 {
+	println(b);
+	c = b;
+	b = a + b;
+	a = c;
+}
+
+---
+
+(source_file
+      (use_stmt
+        (id_literal)
+        (id_literal))
+      (decl_stmt
+        (id_literal)
+        (num_literal))
+      (decl_stmt
+        (id_literal)
+        (num_literal))
+      (decl_stmt
+        (id_literal)
+        (num_literal))
+      (while_stmt
+        (binary_expr
+          (binary_expr
+            (id_literal)
+            (id_literal))
+          (num_literal))
+        (block
+          (fn_call
+            (id_literal)
+            (id_literal))
+          (assign_stmt
+            (id_literal)
+            (id_literal))
+          (assign_stmt
+            (id_literal)
+            (binary_expr
+              (id_literal)
+              (id_literal)))
+          (assign_stmt
+            (id_literal)
+            (id_literal)))))

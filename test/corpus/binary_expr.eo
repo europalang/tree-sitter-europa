@@ -1,0 +1,23 @@
+=================
+Binary Expression
+=================
+
+if 5 > 5 {
+    var x = 5;
+    x += 5;
+}
+
+---
+
+(source_file
+      (if_stmt
+        (binary_expr
+          (num_literal)
+          (num_literal))
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal))
+          (assign_stmt
+            (id_literal)
+            (num_literal)))))

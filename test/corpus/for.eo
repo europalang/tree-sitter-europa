@@ -1,0 +1,26 @@
+========
+For loop
+========
+
+var arr = [1, 2, 3];
+
+for x in arr {
+    println(x);
+}
+
+---
+
+(source_file
+      (decl_stmt
+        (id_literal)
+        (array_literal
+          (num_literal)
+          (num_literal)
+          (num_literal)))
+      (for_loop
+        (id_literal)
+        (id_literal)
+        (block
+          (fn_call
+            (id_literal)
+            (id_literal)))))

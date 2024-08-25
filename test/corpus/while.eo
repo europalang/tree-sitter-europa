@@ -1,0 +1,35 @@
+===============
+While Statement
+===============
+
+while true {
+    var x = 5;
+}
+
+---
+
+(source_file
+      (while_stmt
+        (bool_literal)
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal)))))
+
+==================
+Do-While Statement
+==================
+
+do {
+    var x = 5;
+} while true
+
+---
+
+(source_file
+      (do_while_stmt
+        (block
+          (decl_stmt
+            (id_literal)
+            (num_literal)))
+        (bool_literal)))

@@ -4,12 +4,12 @@ import (
 	"testing"
 
 	tree_sitter "github.com/smacker/go-tree-sitter"
-	"github.com/tree-sitter/tree-sitter-europa"
+	"github.com/europalang/tree-sitter-europa"
 )
 
 func TestCanLoadGrammar(t *testing.T) {
 	language := tree_sitter.NewLanguage(tree_sitter_europa.Language())
 	if language == nil {
-		t.Errorf("Error loading YourLanguageName grammar")
+		t.Errorf("Error loading Europa grammar")
 	}
 }

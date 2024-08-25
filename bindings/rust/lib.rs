@@ -1,4 +1,4 @@
-//! This crate provides YourLanguageName language support for the [tree-sitter][] parsing library.
+//! This crate provides Europa language support for the [tree-sitter][] parsing library.
 //!
 //! Typically, you will use the [language][language func] function to add this language to a
 //! tree-sitter [Parser][], and then use the parser to parse some code:
@@ -49,6 +49,6 @@ mod tests {
         let mut parser = tree_sitter::Parser::new();
         parser
             .set_language(&super::language())
-            .expect("Error loading YourLanguageName grammar");
+            .expect("Error loading Europa grammar");
     }
 }

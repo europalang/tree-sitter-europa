@@ -39,8 +39,6 @@ jobs:
           git clone https://github.com/europalang/Europa-Lang examples/compiler --single-branch --depth=1 --filter=blob:none
       - name: Run tests
         uses: tree-sitter/parser-test-action@v2
-        with:
-          test-rust: ${{runner.os == 'Linux'}}
       - name: Parse examples
         id: examples
         continue-on-error: true
